@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Mail</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Lexend Exa", sans-serif;
+        font-optical-sizing: auto;
+        font-size: 16px;
+        color: #d3e4ff;
+        background-color: #ecfaff;
+      }
+      a,
+      a:active,
+      a:visited {
+        color: inherit;
+        text-decoration: none;
+      }
+      .content,
+      .main {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+      .content {
+        width: 1000px;
+        border-radius: 7px;
+        background: #1b2433;
+        margin: 0 auto;
+        padding: 39px 80px;
+      }
+      /* ------- HEADER ------- */
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 13px;
+      }
+      .header__text {
+        width: 121px;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 115%;
+        letter-spacing: 0.5px;
+        color: #fff;
+      }
+      .header__text--accent {
+        background: linear-gradient(180deg, #0dabff 0%, #bae7ff 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      /* ------- MAIN CONTENT ------- */
+      .main {
+        align-items: center;
+      }
+      /* --- TOP SECTION */
+      .top-section__title {
+        margin-bottom: 12px;
+        font-size: 36px;
+        font-weight: 500;
+        text-align: center;
+        color: #fff;
+      }
+      .top-section__title--accent {
+        background: linear-gradient(
+          91deg,
+          #00a7ff 43.62%,
+          #fff 63.37%,
+          #00a7ff 86.65%,
+          #fff 98.29%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      /* ----- */
+      .text-main {
+        width: 580px;
+        line-height: 142%;
+        letter-spacing: 0.18px;
+        text-align: center;
+        text-wrap: balance;
+      }
+      .btn-main {
+        width: 313px;
+        height: 67px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        border: none;
+        border-top: 1px solid #313f57;
+        border-bottom: 1px solid #313f57;
+        color: #fbfcff;
+        background: linear-gradient(
+          90deg,
+          #0060ff 0%,
+          #4a8eff 37%,
+          #0060ff 74%,
+          #246eea 100%
+        );
+        -webkit-backdrop-filter: blur(25px);
+        backdrop-filter: blur(25px);
+        font-size: 24px;
+        font-weight: 500;
+      }
+      /* ----- */
+      /* --- CRYPTO SECTION and BUSINESS SECTION --- */
+      .section {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding: 32px 32px 48px 58px;
+        border-radius: 7px;
+        border: 1px solid #343d4e;
+        background: #1b2433;
+        -webkit-backdrop-filter: blur(12.5px);
+        backdrop-filter: blur(12.5px);
+      }
+      .section__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 148px;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          rgba(87, 197, 255, 0.29) 0%,
+          rgba(87, 197, 255, 0) 94.85%
+        );
+      }
+      .section__items {
+        list-style: none;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .section__items > li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <!-- HEADER -->
+      <header class="header">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="74"
+          height="74"
+          viewBox="0 0 74 74"
+          fill="none"
+        >
+          <g filter="url(#filter0_d_5_237)">
+            <g clip-path="url(#clip0_5_237)">
+              <path
+                d="M53.1053 6.22204C48.4093 4.08529 43.0073 3 37.0473 3C31.044 3 25.639 4.08529 20.9863 6.22522C20.2155 6.57975 19.8763 7.4955 20.2308 8.26947C20.5885 9.04025 21.498 9.37947 22.275 9.02493C26.5238 7.07318 31.4943 6.08343 37.0473 6.08343C42.5633 6.08343 47.5338 7.07318 51.8258 9.02797C52.0323 9.1235 52.2513 9.16672 52.464 9.16672C53.0498 9.16672 53.611 8.83068 53.87 8.26325C54.2215 7.48929 53.8793 6.57354 53.1053 6.22204Z"
+                fill="#00FFE0"
+              />
+              <path
+                d="M59.7313 18.876C53.4814 12.5243 45.6343 9.16656 37.0411 9.16656C28.4818 9.16656 20.6408 12.5243 14.3693 18.8729C13.7711 19.4803 13.7773 20.4576 14.3816 21.0559C14.9891 21.6541 15.9634 21.6448 16.5616 21.0436C22.2443 15.2902 29.3235 12.25 37.0411 12.25C44.7895 12.25 51.8781 15.2902 57.5329 21.0405C57.8351 21.3458 58.2328 21.5 58.6306 21.5C59.0191 21.5 59.4106 21.352 59.7128 21.056C60.3203 20.4578 60.3295 19.4835 59.7313 18.876Z"
+                fill="#00A7FF"
+              />
+              <path
+                d="M37.0411 15.3333C34.8426 15.3333 32.6596 15.6046 30.5506 16.1411C29.7243 16.3508 29.2248 17.1894 29.4344 18.0158C29.6441 18.8421 30.4889 19.3355 31.3091 19.1288C33.1684 18.6571 35.0986 18.4166 37.0411 18.4166C49.7938 18.4166 60.1661 28.7888 60.1661 41.5416C60.1661 42.3926 60.8568 43.0833 61.7078 43.0833C62.5588 43.0833 63.2495 42.3926 63.2495 41.5416C63.2495 27.09 51.4927 15.3333 37.0411 15.3333Z"
+                fill="#00FFE0"
+              />
+              <path
+                d="M25.9905 19.428C25.565 18.6973 24.6245 18.4475 23.8815 18.8761C21.9143 20.0261 20.086 21.4476 18.4548 23.1003C13.654 27.9535 10.95 34.4932 10.839 41.5201C10.8267 42.3711 11.505 43.071 12.359 43.0833C12.3652 43.0833 12.3745 43.0833 12.3837 43.0833C13.2225 43.0833 13.91 42.4111 13.9223 41.5663C14.021 35.338 16.4075 29.5506 20.647 25.2648C22.09 23.8033 23.7026 22.5515 25.4385 21.537C26.1723 21.1085 26.419 20.165 25.9905 19.428Z"
+                fill="#00FFE0"
+              />
+              <path
+                d="M52.1495 28.385C48.3323 24.0098 42.8255 21.5 37.0411 21.5C31.6638 21.5 26.6225 23.609 22.8423 27.4355C19.0745 31.2402 17.0025 36.3864 17.0025 42.0012C17.0118 45.3189 15.9758 49.2964 14.1196 53.1166L13.2531 54.6584C12.8368 55.4014 13.0989 56.3388 13.8421 56.7581C14.0826 56.8938 14.3416 56.9586 14.5975 56.9586C15.1371 56.9586 15.6613 56.6749 15.9418 56.1723L16.8513 54.5505C18.9819 50.166 20.0981 45.8248 20.0858 41.9213C20.0858 37.2007 21.8403 32.8285 25.0315 29.6033C28.232 26.3658 32.4932 24.5836 37.0411 24.5836C41.9343 24.5836 46.5963 26.708 49.8246 30.4141C50.3826 31.0554 51.3601 31.1201 52.0013 30.5621C52.6428 30.0007 52.7075 29.0265 52.1495 28.385Z"
+                fill="#00A7FF"
+              />
+              <path
+                d="M59.9503 59.314L58.2113 53.6253C57.2338 49.1637 57.1506 44.9055 57.0982 42.3588L57.0828 41.5417C57.0828 39.257 56.6973 37.0123 55.9388 34.8694C55.6551 34.0677 54.7826 33.6484 53.9716 33.9322C53.1699 34.2159 52.7506 35.0946 53.0343 35.8994C53.6756 37.7093 53.9994 39.6086 53.9994 41.5819L54.0179 42.4206C54.0734 45.0784 54.1596 49.5277 55.2326 54.4024L56.9964 60.2114C57.1968 60.8774 57.8104 61.3029 58.4733 61.3029C58.6213 61.3029 58.7724 61.2814 58.9235 61.2382C59.7375 60.9883 60.197 60.131 59.9503 59.314Z"
+                fill="#00FFE0"
+              />
+              <path
+                d="M55.4517 66.4365L54.018 61.8455C51.4743 53.9028 50.9995 44.9735 50.9162 41.5417C50.9162 33.892 44.691 27.6667 37.0412 27.6667C29.3915 27.6667 23.1692 33.9875 23.1692 41.81C23.1755 43.4318 22.8763 52.0004 16.3643 61.3922C15.8771 62.0922 16.0528 63.0542 16.7497 63.5382C17.4465 64.0222 18.4117 63.8497 18.8957 63.1527C25.7592 53.2583 26.2618 44.3075 26.2525 41.7605C26.2525 35.6895 31.0933 30.753 37.0411 30.753C42.9919 30.753 47.8328 35.5938 47.8328 41.5817C47.9438 46.0588 48.5142 54.766 51.0795 62.7797L52.504 67.3522C52.7106 68.012 53.318 68.4345 53.9778 68.4345C54.1289 68.4345 54.2831 68.413 54.4373 68.3667C55.2513 68.1107 55.7045 67.2475 55.4517 66.4365Z"
+                fill="#00FFE0"
+              />
+              <path
+                d="M44.7495 41.5417C44.7495 37.2929 41.29 33.8334 37.0412 33.8334C32.7924 33.8334 29.3329 37.2929 29.3329 41.6004C29.3514 42.1092 29.6937 54.2204 19.901 66.9639C19.383 67.6392 19.5094 68.6074 20.1847 69.1254C20.863 69.6464 21.8281 69.5139 22.3461 68.8417C32.8079 55.2257 32.4317 42.0382 32.4132 41.5419C32.4132 38.9919 34.4882 36.9169 37.0382 36.9169C39.5881 36.9169 41.6632 38.9919 41.6662 41.5758C41.7094 43.3025 41.7187 58.8795 29.6812 74.5181C29.1632 75.1934 29.2865 76.1616 29.9618 76.6796C30.2455 76.8954 30.5753 77.0003 30.9022 77.0003C31.3647 77.0003 31.821 76.7938 32.1232 76.399C44.8296 59.8968 44.7926 43.3393 44.7495 41.5417Z"
+                fill="#00A7FF"
+              />
+              <path
+                d="M38.5766 41.4738C38.5365 40.6258 37.8705 39.9506 36.9701 40.003C36.1221 40.04 35.4624 40.7585 35.4963 41.6095C35.4963 41.631 35.5826 43.888 35.0091 47.4555C34.8766 48.2973 35.4501 49.0897 36.2886 49.2253C36.3719 49.2376 36.4551 49.2438 36.5354 49.2438C37.2784 49.2438 37.9351 48.7043 38.0554 47.9488C38.6845 44.036 38.5828 41.5755 38.5766 41.4738Z"
+                fill="#00FFE0"
+              />
+              <path
+                d="M35.5518 52.4413C34.7316 52.1977 33.8776 52.6663 33.634 53.4803C31.707 59.9893 28.5003 66.0758 24.1096 71.5763C23.5793 72.2423 23.6871 73.2106 24.3531 73.7439C24.6368 73.9721 24.9759 74.0799 25.3151 74.0799C25.7684 74.0799 26.2154 73.8826 26.5206 73.5002C31.1611 67.6912 34.5496 61.2502 36.5939 54.3589C36.8345 53.542 36.369 52.6818 35.5518 52.4413Z"
+                fill="#00FFE0"
+              />
+              <path
+                d="M50.4937 70.9135L48.6345 65.0089C47.8945 62.7952 47.2038 60.4549 47.2007 60.4457C47.0157 59.8197 46.4607 59.3789 45.8102 59.3419C45.1442 59.2956 44.5552 59.6779 44.3025 60.2792C44.2685 60.3594 40.8337 68.4346 36.8962 74.6321C36.44 75.3506 36.6527 76.3033 37.371 76.7596C37.627 76.9231 37.9137 77.0001 38.1973 77.0001C38.7091 77.0001 39.2056 76.7473 39.4985 76.2848C41.882 72.5324 44.0465 68.2188 45.4586 65.2188C45.5388 65.4655 45.622 65.7153 45.7053 65.9618L47.5522 71.8386C47.8082 72.6496 48.6653 73.1059 49.4855 72.8469C50.2963 72.5908 50.7496 71.7275 50.4937 70.9135Z"
+                fill="#00A7FF"
+              />
+            </g>
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_5_237"
+              x="-3.47001"
+              y="0.364395"
+              width="84.5424"
+              height="84.5424"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dx="1.75707" dy="2.63561" />
+              <feGaussianBlur stdDeviation="2.63561" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_5_237"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_5_237"
+                result="shape"
+              />
+            </filter>
+            <clipPath id="clip0_5_237">
+              <rect x="0.0441284" y="3" width="74" height="74" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+        <div class="header__text">
+          Stealth <span class="header__text--accent">Way</span>
+        </div>
+      </header>
+      <!-- MAIN CONTENT -->
+      <main class="main">
+        <!-- TOP SECTION -->
+        <section class="top-section">
+          <h1 class="top-section__title">
+            Dear <span class="top-section__title--accent">customer</span>,
+          </h1>
+          <p class="text-main">
+            We are pleased to inform you that today we have added new products
+            to the shop as well as plenty of fresh stock
+          </p>
+        </section>
+        <button class="btn-main">
+          <a href="https://stealthway.info/" target="_blank">Shop now</a>
+        </button>
+        <!-- CRYPTO SECTION -->
+        <section class="crypto-section section">
+          <div class="section__overlay"></div>
+          <ul class="section__items">
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_66)">
+                  <path
+                    d="M0 12C6 12 12 6 12 0C12 6 18 12 24 12C18 12 12 18 12 24C12 18 6 12 0 12Z"
+                    fill="#00A7FF"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_66">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>BMO HARRIS + CRYPTO.COM BUNDLE - NEW</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_66)">
+                  <path
+                    d="M0 12C6 12 12 6 12 0C12 6 18 12 24 12C18 12 12 18 12 24C12 18 6 12 0 12Z"
+                    fill="#00A7FF"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_66">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>CRYPTO.COM - NEW</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_66)">
+                  <path
+                    d="M0 12C6 12 12 6 12 0C12 6 18 12 24 12C18 12 12 18 12 24C12 18 6 12 0 12Z"
+                    fill="#00A7FF"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_66">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>MOONPAY - NEW</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_66)">
+                  <path
+                    d="M0 12C6 12 12 6 12 0C12 6 18 12 24 12C18 12 12 18 12 24C12 18 6 12 0 12Z"
+                    fill="#00A7FF"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_66">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>CASHAPP (BTC ENABLED) - NEW</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_66)">
+                  <path
+                    d="M0 12C6 12 12 6 12 0C12 6 18 12 24 12C18 12 12 18 12 24C12 18 6 12 0 12Z"
+                    fill="#00A7FF"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_66">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>STRIPE BUSINESS (SELFIE VERIF) + HISTORY + 2 DAY</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_66)">
+                  <path
+                    d="M0 12C6 12 12 6 12 0C12 6 18 12 24 12C18 12 12 18 12 24C12 18 6 12 0 12Z"
+                    fill="#00A7FF"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_66">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>PAYOUTS - NEW</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_66)">
+                  <path
+                    d="M0 12C6 12 12 6 12 0C12 6 18 12 24 12C18 12 12 18 12 24C12 18 6 12 0 12Z"
+                    fill="#00A7FF"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_66">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>RELAYFI BUSINESS – NEWLY</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_66)">
+                  <path
+                    d="M0 12C6 12 12 6 12 0C12 6 18 12 24 12C18 12 12 18 12 24C12 18 6 12 0 12Z"
+                    fill="#00A7FF"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_66">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span class="item__text"
+                >FULL INFO (DL BOTH SIDES + SELFIE) + KNOWN CS - NEW</span
+              >
+            </li>
+          </ul>
+        </section>
+        <!-- BUSINESS SECTION -->
+        <section class="business-section section">
+          <div class="section__overlay"></div>
+          <ul class="section__items">
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_66)">
+                  <path
+                    d="M0 12C6 12 12 6 12 0C12 6 18 12 24 12C18 12 12 18 12 24C12 18 6 12 0 12Z"
+                    fill="#00A7FF"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_66">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>MERCURY BUSINESS – RESTOCKED</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_66)">
+                  <path
+                    d="M0 12C6 12 12 6 12 0C12 6 18 12 24 12C18 12 12 18 12 24C12 18 6 12 0 12Z"
+                    fill="#00A7FF"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_66">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>NOVO BUSINESS – RESTOCKED</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_66)">
+                  <path
+                    d="M0 12C6 12 12 6 12 0C12 6 18 12 24 12C18 12 12 18 12 24C12 18 6 12 0 12Z"
+                    fill="#00A7FF"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_66">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>AIRWALLEX BUSINESS – RESTOCKED</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_66)">
+                  <path
+                    d="M0 12C6 12 12 6 12 0C12 6 18 12 24 12C18 12 12 18 12 24C12 18 6 12 0 12Z"
+                    fill="#00A7FF"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_66">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>QUICKBOOKS BUSINESS - RESTOCKED</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_66)">
+                  <path
+                    d="M0 12C6 12 12 6 12 0C12 6 18 12 24 12C18 12 12 18 12 24C12 18 6 12 0 12Z"
+                    fill="#00A7FF"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_66">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>GOOGLE VOICE – RESTOCKED</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_66)">
+                  <path
+                    d="M0 12C6 12 12 6 12 0C12 6 18 12 24 12C18 12 12 18 12 24C12 18 6 12 0 12Z"
+                    fill="#00A7FF"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_66">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>CHASE SELFREG CC - RESTOCKED</span>
+            </li>
+          </ul>
+        </section>
+        <p class="text-main">
+          Our channel and support account were deleted, please use the
+          &#64;StealthwayBot to join us on Telegram again!
+        </p>
+        <button class="btn-main">
+          <a href="https://t.me/StealthWayBot" target="_blank"
+            >&#64;StealthwayBot</a
+          >
+        </button>
+      </main>
+    </div>
+  </body>
+</html>
